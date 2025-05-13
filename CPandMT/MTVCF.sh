@@ -6,6 +6,8 @@ threads=22
 #samtools faidx V6CircularizedPolishedMitogenomenextpolish.fa
 ref="V6CircularizedPolishedMitogenomenextpolish.fa"
 
+#F2 numbers 1, 2, and 3 correspond to samples 4, 5, and 6, with 3 being the F1. PIA is the female parent, QIA the male. 
+
 freebayes-parallel <(fasta_generate_regions.py "$ref.fai" 200000) $threads \
 -f $ref --gvcf --genotype-qualities --use-best-n-alleles 4 -g 5000 F2/PIA.MT.bam F2/QIA.MT.bam F2/3.MT.bam F2/4.MT.bam F2/5.MT.bam F2/6.MT.bam > RawMT.vcf
 
