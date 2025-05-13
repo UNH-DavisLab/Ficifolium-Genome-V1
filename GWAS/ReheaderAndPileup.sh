@@ -25,5 +25,5 @@ freebayes-parallel <(fasta_generate_regions.py $reffai 100000) $threads \
 vcffilter -f "QUAL > 990" > F2sWithParentsfreebayes.vcf
 
 
-#bgzip F2sWithParents.vcf > F2sWithParents.vcf.gz
+#bgzip F2sWithParentsfreebayes.vcf > F2sWithParentsfreebayes.vcf.gz
 
