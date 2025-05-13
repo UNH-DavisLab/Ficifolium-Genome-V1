@@ -8,7 +8,7 @@ reffai="ficifolium/V1/ReferenceFiles/ordered_new_ficifolium_with_contigs_correct
 
 for dir in ficifolium/V1/F2toV1/*/
 do
-	Label=$(basename $dir)
+    Label=$(basename $dir)
     BamF=$(find $dir -name *.bam)
 
     FileNameBam="${Label}.bam"
